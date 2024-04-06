@@ -3,8 +3,8 @@ import { Lato } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from '@clerk/nextjs'
 import { Toaster } from "react-hot-toast";
-import Navbar from "@/components/Navbar";
 import Providers from "@/components/Providers";
+import Navbar from "@/components/Navbar";
 
 const lato = Lato({ subsets: ["latin"], weight: ["100", "400", "700", "900"] });
 

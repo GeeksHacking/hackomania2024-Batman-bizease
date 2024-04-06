@@ -43,7 +43,7 @@ const MessageList = ({ messages, isLoading }: Props) => {
                     }
                   )}
                 >
-                  <p><Markdown remarkPlugins={[remarkGfm]}>{message.content}</Markdown></p>
+                  <div><Markdown remarkPlugins={[remarkGfm]}>{message.content}</Markdown></div>
                 </div>
                 <div className={cn("flex mt-2", {"justify-end": message.role === "user"})}>
                   <User/>

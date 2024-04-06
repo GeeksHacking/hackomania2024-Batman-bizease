@@ -18,7 +18,6 @@ export async function POST(req: Request) {
     if (_chats.length != 1) {
       return NextResponse.json({ error: "chat not found" }, { status: 404 });
     }
-    // const fileKey = _chats[0].fileKey;
     const lastMessage = messages[messages.length - 1];
 
     // Retain chat context from previous questions and responses
@@ -90,7 +89,7 @@ export async function POST(req: Request) {
       },
       onCompletion: async (completion) => {
         // save ai message into db
-        // completion += sourcesText
+        completion += sourcesText
         // data.append({
         //   text: sourcesText
         // })
