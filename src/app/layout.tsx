@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClerkProvider } from '@clerk/nextjs'
 import { Toaster } from "react-hot-toast";
 import Navbar from "@/components/Navbar";
+import Providers from "@/components/Providers";
 
 const lato = Lato({ subsets: ["latin"], weight: ["100", "400", "700", "900"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
+      <Providers>
         <html lang='en' className={lato.className}>
           <body>
             <Toaster position="top-right" />
@@ -26,6 +28,7 @@ export default function RootLayout({
             {children}
           </body>
         </html>
+      </Providers>
     </ClerkProvider>
   );
 }
