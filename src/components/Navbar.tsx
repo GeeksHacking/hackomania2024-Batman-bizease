@@ -17,7 +17,7 @@ export default function Navbar() {
         />
         <Link href="/">
           <h1 className="text-2xl font-bold">
-            Everything You Need
+            BizEase
           </h1>
         </Link>
       </div>
